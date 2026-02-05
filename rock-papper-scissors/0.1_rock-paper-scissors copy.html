@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<!-- STEPS aka Algorithm -->
+ <!-- when we click a button:
+ 1. Computer randomly selects a move
+ 2. Compare the moves to get the result
+ 3. Display the result in a popup -->
+
+<body>
+    <h2>Rock Paper Scissors</h2>
+
+    <button onclick="
+    let num = Math.random();    //generates a num btw 0 and 1
+
+    let computerMove ='';
+    if(num > 0 && num < 1/3) {
+        computerMove = 'Rock';
+    } else if (num >= 1/3 &&  num < 2/3) {
+        computerMove = 'Paper';
+    } else if (num >= 2/3 && num < 1) {
+        computerMove = 'Scissors';
+    }
+
+    let result = '';
+    if(computerMove === 'Rock') {
+        result = 'Tie';
+    } else if(computerMove === 'Paper') {
+        result = 'You lose';
+    } else if(computerMove === 'Scissors') {
+        result = 'You win';
+    }
+
+    console.log(`You picked rock. Computer picked ${computerMove}. ${result}.`);
+    ">Rock</button>
+    <button onclick ="
+    let num = Math.random();
+    let computerMove = '';
+    if(num > 0 && num <= 1/3){
+        computerMove = 'Rock';
+    } else if(num > 1/3 && num <=2/3) {
+        computerMove = 'Paper';
+    } else if(num > 2/3 && num < 1) {
+        computerMove = 'Scissors';
+    }
+
+    let result = '';
+    if(computerMove === 'Paper') {
+        result = 'Tie';
+    } else if(computerMove === 'Rock') {
+        result = 'You win';
+    } else if(computerMove === 'Scissors') {
+        result = 'You lose';
+    }
+
+    console.log(`You picked paper. Computer pcked ${computerMove}. ${result}`);
+    ">Paper</button>
+    <button onclick="
+    let num = Math.random();    //generates a num btw 0 and 1
+
+    let computerMove ='';
+    if(num > 0 && num < 1/3) {
+        computerMove = 'Rock';
+    } else if (num >= 1/3 &&  num < 2/3) {
+        computerMove = 'Paper';
+    } else if (num >= 2/3 && num < 1) {
+        computerMove = 'Scissors';
+    }
+
+    let result = '';
+    if(computerMove === 'Rock') {
+        result = 'You lose';
+    } else if(computerMove === 'Paper') {
+        result = 'You win';
+    } else if(computerMove === 'Scissors') {
+        result = 'Tie';
+    }
+    
+    console.log(`You picked scissors. Computer pcked ${computerMove}. ${result}`);
+    ">Scissors</button>
+</body>
+</html>

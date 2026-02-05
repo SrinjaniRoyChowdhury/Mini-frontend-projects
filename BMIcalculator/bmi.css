@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    margin-left: 3px;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(197, 197, 197);
+}
+h1 {
+    margin: 20px 30px 40px 20px;
+    font-weight: bolder;
+}
+
+form {
+    margin-left: 30px;
+}
+
+#height,
+#weight {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: large;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1.5px;
+    margin-bottom: 30px;
+}
+#results {
+    font-size: large;
+    margin-bottom: 20px;
+    color: rgb(5, 9, 99);
+    font-weight: bold;
+}
+.weightGuide {
+    margin-left: 20px;
+}
+h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}

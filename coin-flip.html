@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin flip</title>
+</head>
+<body>
+    <h2>COIN FLIP</h2>
+
+    <button onclick="
+        playGame('Heads');    
+    ">heads</button>
+    <button onclick="
+        playGame('Tails');
+    ">tails</button>
+
+    <p class="js-move"></p>
+
+    <p>
+        <button onclick="
+            score.wins = 0;
+            score.losses = 0;
+        localStorage.removeItem('score')    
+        ">Reset score</button>
+    </p>
+    
+    
+    <script>
+        let score = JSON.parse(localStorage.getItem('score')); 
+        if(score === null){
+            score = {
+            wins: 0,
+            losses: 0
+        };
+        }
+        
+
+        function playGame(guess) {
+            const num = Math.random();
+            console.log(num);      // remember to delete this after completing
+            let result = '' ; 
+            (num <=0.5) ? result = 'Heads' : result = 'Tails';
+            
+            // (guess === result) ? console.log('you win') : console.log('you lose');
+            if(guess === result) {
+                console.log('you win');
+                score.wins++ ;
+            } else {
+                console.log('you lose');
+                score.losses++ ;
+            }
+            console.log(score);
+
+            localStorage.setItem('score', JSON.stringify(score));
+
+            document.querySelector('.js-move')
+              .innerHTML = `You chose: ${guess}`
+        }
+    
+    </script>
+</body>
+</html>
